@@ -1,2 +1,2 @@
-# interbank
-Interbank Networks Dataset and baseline methods
+# A Benchmark for Interbank Credit Rating 
+## Details Coming soon
