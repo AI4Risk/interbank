@@ -1,2 +1,2 @@
-# A Benchmark for Interbank Credit Rating 
+# Interbank Risk Rating: Datasets and Methods 
 ## Details Coming soon
