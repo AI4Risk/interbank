@@ -1,8 +1,13 @@
-# PSAGNN
-Implementation for the paper "Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating"
+# Interbank
+Interbank Risk Rating: Awesome Datasets and Methods
 
 ## Abstract
-Accurately assessing and forecasting bank credit ratings at an early stage is vitally important for a healthy financial environment and sustainable economic development. However, the evaluation process faces challenges due to individual attacks on the rating model. Some participants may provide manipulated information in an attempt to undermine the rating model and secure higher scores, further complicating the evaluation process. Therefore, we propose a novel approach called the Preferential Selective-aware Graph Neural Network model (PSAGNN) to simultaneously defend against feature and structural non-target poisoning attacks on Interbank credit ratings. In particular, the model establishes a phased optimization approach combined with biased perturbation, and explores the Interbank preferences and scale-free nature of networks, to adaptively prioritize the poisoning training data and simulate a clean graph. Finally, we apply a weighted penalty on the opposition function to optimize the model so that the model can distinguish between attackers. Extensive experiments on our newly collected Interbank quarter dataset and case studies demonstrate the superior performance of our proposed approach in preventing credit rating attacks compared to state-of-the-art baselines.
+Accurately assessing and forecasting bank credit ratings at an early stage is vitally important for a healthy financial environment and sustainable economic development. In this repository, we contribute awesome datasets and state-of-the-art methods for the academic research of interbank risk and credit rating. 
+
+Source codes implementation of papers:
+
+- `SA-GNN`: Preventing attacks in interbank credit rating with selective-aware graph neural network, in IJCAI 2023. 
+- `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, 
 
 ## Dataset
 We collected data spanning 29 quarters, covering a diverse array of banks worldwide, from the first quarter of 2016 to the first quarter of 2023. The included bank categories encompass commercial banks, savings banks, cooperative banks, real estate and mortgage banks, investment banks, Islamic banks, and central banks. In particular, the data set includes Silicon Valley Bank, Signature Bank, First Republic Bank and Credit Suisse Group during the 2023 financial crisis, as well as banks speculated to be closely related to them, so that they can be used to analyze this crisis event in the future.
@@ -33,3 +38,16 @@ python train.py --year predict_year --Q predict_quarter --attack_rate attack_rat
 ```
 
 The attack_quarter is the first two quarters of the predict_quarter.
+
+## Citing
+
+If you find *Interbank* is useful for your research, please consider citing the following papers:
+
+    @inproceedings{liu2023preventing,
+      title={Preventing attacks in interbank credit rating with selective-aware graph neural network},
+      author={Liu, Junyi and Cheng, Dawei and Jiang, Changjun},
+      booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+      pages={6085--6093},
+      year={2023}
+    }
+    
