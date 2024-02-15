@@ -6,8 +6,8 @@ Accurately assessing and forecasting bank credit ratings at an early stage is vi
 
 Source codes implementation of papers:
 
-- `SA-GNN`: Preventing attacks in interbank credit rating with selective-aware graph neural network, in IJCAI 2023. 
-- `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, 
+- `SA-GNN`: Preventing attacks in interbank credit rating with selective-aware graph neural network, published in [IJCAI 2023](https://www.ijcai.org/proceedings/2023/0675.pdf). 
+- `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, Under Review. 
 
 ## Dataset
 We collected data spanning 29 quarters, covering a diverse array of banks worldwide, from the first quarter of 2016 to the first quarter of 2023. The included bank categories encompass commercial banks, savings banks, cooperative banks, real estate and mortgage banks, investment banks, Islamic banks, and central banks. In particular, the data set includes Silicon Valley Bank, Signature Bank, First Republic Bank and Credit Suisse Group during the 2023 financial crisis, as well as banks speculated to be closely related to them, so that they can be used to analyze this crisis event in the future.
