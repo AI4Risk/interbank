@@ -15,8 +15,8 @@ parser.add_argument('--attack_rate', type=float, default=0.25, help="noise ptb_r
 args = parser.parse_args()
 
 def edge_attack(year,Q,attack_rate):
-    df = pd.read_csv("data/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
-    ed = pd.read_csv("data/edge_Q/edge_"+str(year)+"Q"+str(Q)+".csv")
+    df = pd.read_csv("datasets/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
+    ed = pd.read_csv("datasets/edge_Q/edge_"+str(year)+"Q"+str(Q)+".csv")
     df1=df[df['rank_pre']==1]
     df2=df[df['rank_pre']==2]
     df3=df[df['rank_pre']==3]
@@ -63,10 +63,10 @@ def edge_attack(year,Q,attack_rate):
 
     dict1 = {"Sourceid":s1,"Targetid":t1}
     edge = pd.DataFrame(dict1)
-    save_path_dir="data/edge_Q"+str(attack_rate)+"/"
+    save_path_dir="datasets/edge_Q"+str(attack_rate)+"/"
     if not os.path.exists(save_path_dir):
         os.makedirs(save_path_dir)
-    edge.to_csv("data/edge_Q"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(Q)+".csv",index=False)
+    edge.to_csv("datasets/edge_Q"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(Q)+".csv",index=False)
 
 
 def feature_attack(year,Q,attack_rate):
@@ -76,7 +76,7 @@ def feature_attack(year,Q,attack_rate):
         allQ=[]
         for i in range(2016,2023):
             for j in range(1,5):
-                df = pd.read_csv("data/rank_pre_Q/"+str(i)+"Q"+str(j)+".csv")
+                df = pd.read_csv("datasets/rank_pre_Q/"+str(i)+"Q"+str(j)+".csv")
                 df1=df[df['rank_pre']==1]
                 df2=df[df['rank_pre']==2]
                 df3=df[df['rank_pre']==3]
@@ -90,7 +90,7 @@ def feature_attack(year,Q,attack_rate):
     for k in range(1,70):
         all[k-1]=pd.DataFrame(all[k-1],columns=c,index=y)      
 
-    df = pd.read_csv("data/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
+    df = pd.read_csv("datasets/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
     df1=df[df['rank_pre']==1]
     df2=df[df['rank_pre']==2]
     df3=df[df['rank_pre']==3]
@@ -107,10 +107,10 @@ def feature_attack(year,Q,attack_rate):
     content = pd.concat([df1,df2_train, df2_test, df3_train, df3_test, df4_train, df4_test], axis=0, join='inner')
     content=content.sort_values(by=['index'])
     content['rank_pre']=content['rank_pre'].astype(int)
-    save_path_dir="data/rank_pre_Q"+str(attack_rate)+"/"
+    save_path_dir="datasets/rank_pre_Q"+str(attack_rate)+"/"
     if not os.path.exists(save_path_dir):
          os.makedirs(save_path_dir)
-    content.to_csv("data/rank_pre_Q"+str(attack_rate)+"/"+str(year)+"Q"+str(Q)+".csv",index=False)
+    content.to_csv("datasets/rank_pre_Q"+str(attack_rate)+"/"+str(year)+"Q"+str(Q)+".csv",index=False)
 
 
 # for i in range(2019,2024):
