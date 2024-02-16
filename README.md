@@ -37,12 +37,12 @@ For each quarter, there is an Edge table and a Feature table. For the Edge table
 
 The results of the performance of credit rating predicting in a test of different quarters on different attack rates are listed as follows:
 
-![performance](performance.png "performance")
+![performance](/images/performance.png "performance")
 
 The decline in accuracy for credit rating prediction was evident in testing scenarios spanning different years (averaging across four quarters) and
 various attack rates are listed as follows:
 
-![decline](decline.png "decline")
+![decline](/images/decline.png "decline")
 
 
 ## Repo Structure
@@ -62,7 +62,8 @@ various attack rates are listed as follows:
 `requirements.txt:` package dependencies;
 
 
-## Requirements
+## Requirements  
+
 ```
 python                       3.7
 torch                        1.8.1+cu111
@@ -71,7 +72,7 @@ torch-geometric              2.1.0.post1
 torch-scatter                2.0.8
 torch-sparse                 0.6.12
 powerlaw                     1.3.3
-
+```
 
 ## Citing
 
