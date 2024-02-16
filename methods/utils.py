@@ -5,34 +5,34 @@ import numpy as np
 def load_data(year,Q,attack_rate):
     if Q==1:
         if attack_rate!=0:
-            cites1 = "datasets/edge_Q"+str(attack_rate)+"/edge_"+str(int(year)-1)+"Q3.csv"
-            content1 = "datasets/rank_pre_Q"+str(attack_rate)+"/"+str(int(year)-1)+"Q3.csv"
+            cites1 = "datasets/edges"+str(attack_rate)+"/edge_"+str(int(year)-1)+"Q3.csv"
+            content1 = "datasets/nodes"+str(attack_rate)+"/"+str(int(year)-1)+"Q3.csv"
         else:
-            cites1 = "datasets/edge_Q/edge_"+str(year-1)+"Q3.csv"
-            content1 = "datasets/rank_pre_Q/"+str(year-1)+"Q3.csv"
+            cites1 = "datasets/edges/edge_"+str(year-1)+"Q3.csv"
+            content1 = "datasets/nodes/"+str(year-1)+"Q3.csv"
 
-        cites2 = "datasets/edge_Q/edge_"+str(int(year)-1)+"Q4.csv"
-        content2 = "datasets/rank_pre_Q/"+str(int(year)-1)+"Q4.csv"
+        cites2 = "datasets/edges/edge_"+str(int(year)-1)+"Q4.csv"
+        content2 = "datasets/nodes/"+str(int(year)-1)+"Q4.csv"
     elif Q==2:
         if attack_rate!=0:
-            cites1 = "datasets/edge_Q"+str(attack_rate)+"/edge_"+str(int(year)-1)+"Q4.csv"
-            content1 = "datasets/rank_pre_Q"+str(attack_rate)+"/"+str(int(year)-1)+"Q4.csv"
+            cites1 = "datasets/edges"+str(attack_rate)+"/edge_"+str(int(year)-1)+"Q4.csv"
+            content1 = "datasets/nodes"+str(attack_rate)+"/"+str(int(year)-1)+"Q4.csv"
         else:
-            cites1 = "datasets/edge_Q/edge_"+str(int(year)-1)+"Q4.csv"
-            content1 = "datasets/rank_pre_Q/"+str(int(year)-1)+"Q4.csv"
+            cites1 = "datasets/edges/edge_"+str(int(year)-1)+"Q4.csv"
+            content1 = "datasets/nodes/"+str(int(year)-1)+"Q4.csv"
 
-        cites2 = "datasets/edge_Q/edge_"+str(year)+"Q1.csv"
-        content2 = "datasets/rank_pre_Q/"+str(year)+"Q1.csv"
+        cites2 = "datasets/edges/edge_"+str(year)+"Q1.csv"
+        content2 = "datasets/nodes/"+str(year)+"Q1.csv"
     else:
         if attack_rate!=0:
-            cites1 = "datasets/edge_Q"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(int(Q)-2)+".csv"
-            content1 = "datasets/rank_pre_Q"+str(attack_rate)+"/"+str(year)+"Q"+str(int(Q)-2)+".csv"
+            cites1 = "datasets/edges"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(int(Q)-2)+".csv"
+            content1 = "datasets/nodes"+str(attack_rate)+"/"+str(year)+"Q"+str(int(Q)-2)+".csv"
         else:
-            cites1 = "datasets/edge_Q/edge_"+str(year)+"Q"+str(int(Q)-2)+".csv"
-            content1 = "datasets/rank_pre_Q/"+str(year)+"Q"+str(int(Q)-2)+".csv"
+            cites1 = "datasets/edges/edge_"+str(year)+"Q"+str(int(Q)-2)+".csv"
+            content1 = "datasets/nodes/"+str(year)+"Q"+str(int(Q)-2)+".csv"
 
-        cites2 = "datasets/edge_Q/edge_"+str(year)+"Q"+str(int(Q)-1)+".csv"
-        content2 = "datasets/rank_pre_Q/"+str(year)+"Q"+str(int(Q)-1)+".csv"
+        cites2 = "datasets/edges/edge_"+str(year)+"Q"+str(int(Q)-1)+".csv"
+        content2 = "datasets/nodes/"+str(year)+"Q"+str(int(Q)-1)+".csv"
 
     
     index_dict = dict()

@@ -15,12 +15,12 @@ parser.add_argument('--attack_rate', type=float, default=0.25, help="noise ptb_r
 args = parser.parse_args()
 
 def edge_attack(year,Q,attack_rate):
-    df = pd.read_csv("datasets/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
-    ed = pd.read_csv("datasets/edge_Q/edge_"+str(year)+"Q"+str(Q)+".csv")
-    df1=df[df['rank_pre']==1]
-    df2=df[df['rank_pre']==2]
-    df3=df[df['rank_pre']==3]
-    df4=df[df['rank_pre']==4]
+    df = pd.read_csv("datasets/nodes/"+str(year)+"Q"+str(Q)+".csv")
+    ed = pd.read_csv("datasets/edges/edge_"+str(year)+"Q"+str(Q)+".csv")
+    df1=df[df['rank_next_quarter']==1]
+    df2=df[df['rank_next_quarter']==2]
+    df3=df[df['rank_next_quarter']==3]
+    df4=df[df['rank_next_quarter']==4]
 
     rate=2*attack_rate
     df1_train, df1_test = train_test_split(df1, test_size= rate, random_state=1234)
@@ -63,10 +63,10 @@ def edge_attack(year,Q,attack_rate):
 
     dict1 = {"Sourceid":s1,"Targetid":t1}
     edge = pd.DataFrame(dict1)
-    save_path_dir="datasets/edge_Q"+str(attack_rate)+"/"
+    save_path_dir="datasets/edges"+str(attack_rate)+"/"
     if not os.path.exists(save_path_dir):
         os.makedirs(save_path_dir)
-    edge.to_csv("datasets/edge_Q"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(Q)+".csv",index=False)
+    edge.to_csv("datasets/edges"+str(attack_rate)+"/edge_"+str(year)+"Q"+str(Q)+".csv",index=False)
 
 
 def feature_attack(year,Q,attack_rate):
@@ -76,11 +76,11 @@ def feature_attack(year,Q,attack_rate):
         allQ=[]
         for i in range(2016,2023):
             for j in range(1,5):
-                df = pd.read_csv("datasets/rank_pre_Q/"+str(i)+"Q"+str(j)+".csv")
-                df1=df[df['rank_pre']==1]
-                df2=df[df['rank_pre']==2]
-                df3=df[df['rank_pre']==3]
-                df4=df[df['rank_pre']==4]
+                df = pd.read_csv("datasets/nodes/"+str(i)+"Q"+str(j)+".csv")
+                df1=df[df['rank_next_quarter']==1]
+                df2=df[df['rank_next_quarter']==2]
+                df3=df[df['rank_next_quarter']==3]
+                df4=df[df['rank_next_quarter']==4]
                 allQ.append([sum(df1.iloc[:,k])/len(df1),sum(df2.iloc[:,k])/len(df2),sum(df3.iloc[:,k])/len(df3),sum(df4.iloc[:,k])/len(df4)])
         all.append(allQ)     
 
@@ -90,11 +90,11 @@ def feature_attack(year,Q,attack_rate):
     for k in range(1,70):
         all[k-1]=pd.DataFrame(all[k-1],columns=c,index=y)      
 
-    df = pd.read_csv("datasets/rank_pre_Q/"+str(year)+"Q"+str(Q)+".csv")
-    df1=df[df['rank_pre']==1]
-    df2=df[df['rank_pre']==2]
-    df3=df[df['rank_pre']==3]
-    df4=df[df['rank_pre']==4]
+    df = pd.read_csv("datasets/nodes/"+str(year)+"Q"+str(Q)+".csv")
+    df1=df[df['rank_next_quarter']==1]
+    df2=df[df['rank_next_quarter']==2]
+    df3=df[df['rank_next_quarter']==3]
+    df4=df[df['rank_next_quarter']==4]
 
     rate=2*attack_rate
     df2_train, df2_test = train_test_split(df2, test_size= rate, random_state=1234)
@@ -106,11 +106,11 @@ def feature_attack(year,Q,attack_rate):
 
     content = pd.concat([df1,df2_train, df2_test, df3_train, df3_test, df4_train, df4_test], axis=0, join='inner')
     content=content.sort_values(by=['index'])
-    content['rank_pre']=content['rank_pre'].astype(int)
-    save_path_dir="datasets/rank_pre_Q"+str(attack_rate)+"/"
+    content['rank_next_quarter']=content['rank_next_quarter'].astype(int)
+    save_path_dir="datasets/nodes"+str(attack_rate)+"/"
     if not os.path.exists(save_path_dir):
          os.makedirs(save_path_dir)
-    content.to_csv("datasets/rank_pre_Q"+str(attack_rate)+"/"+str(year)+"Q"+str(Q)+".csv",index=False)
+    content.to_csv("datasets/nodes"+str(attack_rate)+"/"+str(year)+"Q"+str(Q)+".csv",index=False)
 
 
 # for i in range(2019,2024):
