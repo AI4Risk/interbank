@@ -20,7 +20,7 @@ python attack_methods/attack.py --year attack_year --Q attack_quarter --attack_r
 ### Training & Testing
 To train the PSAGNN model, run
 ```
-python methods/train.py --year predict_year --Q predict_quarter --attack_rate attack_rate --epochs epoch
+python train.py --method PSAGNN --year predict_year --Q predict_quarter --attack_rate attack_rate --epochs epoch
 ```
 
 The attack_quarter is the first two quarters of the predict_quarter.
