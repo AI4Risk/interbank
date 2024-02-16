@@ -14,13 +14,13 @@ Source codes implementation of papers:
 ### Attacking
 To attack the data, run
 ```
-python attack.py --year attack_year --Q attack_quarter --attack_rate attack_rate
+python attack_methods/attack.py --year attack_year --Q attack_quarter --attack_rate attack_rate
 ```
 
 ### Training & Testing
-To train the model, run
+To train the PSAGNN model, run
 ```
-python train.py --year predict_year --Q predict_quarter --attack_rate attack_rate --epochs epoch
+python methods/train.py --year predict_year --Q predict_quarter --attack_rate attack_rate --epochs epoch
 ```
 
 The attack_quarter is the first two quarters of the predict_quarter.
@@ -29,8 +29,7 @@ The attack_quarter is the first two quarters of the predict_quarter.
 ### Data Description
 We collected data spanning 29 quarters, covering a diverse array of banks worldwide, from the first quarter of 2016 to the first quarter of 2023. The included bank categories encompass commercial banks, savings banks, cooperative banks, real estate and mortgage banks, investment banks, Islamic banks, and central banks. In particular, the data set includes Silicon Valley Bank, Signature Bank, First Republic Bank and Credit Suisse Group during the 2023 financial crisis, as well as banks speculated to be closely related to them, so that they can be used to analyze this crisis event in the future.
 
-For each quarter, there is an Edge table and a Feature table. For the Edge table, we used our improved minimum density method to generate Interbank networks (see 3.1 for details). For the Feature table, we collected over 300 features related to various bank finance. After undergoing data cleaning, feature selection, and dimensionality reduction, we finally identified 70 features. For data ratings, we collect existing ratings given by organizations such as Moody's, use machine learning methods to fit existing data to fill in the gaps, and rank the original dozen or so ratings according to relative levels in each quarter's data. It is divided into four categories of ratings.
-
+For each quarter, there is an Edge table and a Feature table. For the Edge table, we used our improved minimum density method to generate Interbank networks. For the Feature table, we collected over 300 features related to various bank finance. After undergoing data cleaning, feature selection, dimensionality reduction, and normalization, we finally identified 70 features. For data ratings, we collect existing ratings given by organizations such as Moody's, use machine learning methods to fit existing data to fill in the gaps, and rank the original dozen or so ratings according to relative levels in each quarter's data. It is divided into four categories of ratings.
 
 
 ## Test Result
