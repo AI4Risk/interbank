@@ -82,7 +82,12 @@ torch-sparse                 0.6.12
 powerlaw                     1.3.3
 ```
 
-## Citing
+### Contributors :
+<a href="https://github.com/AI4Risk/interbank/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AI4Risk/interbank" />
+</a>
+
+### Citing
 
 If you find *Interbank* is useful for your research, please consider citing the following papers:
 
