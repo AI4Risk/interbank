@@ -16,23 +16,23 @@ Source codes implementation of papers:
 
 ## Contents
 
+- [Repo Structure](#repo-structure)
 - [Dataset](#dataset)
 - [Methods](#Methods)
   - [Credit Rating Method](#credit-rating-method)
   - [Credit Rating Defense Method](#credit-rating-defense-method)
 
-- [Repo Structure](#repo-structure)
 - [Requirements](#requirements) 
 - [License](#license) 
 - [Citation](#citation) 
 
 ## Repo Structure
 
+`datasets/:` dataset files;
+
 `methods/:` the implementation of interbank credit rating methods;
 
 `models/:` the trained offline models of interbank credit rating;
-
-`datasets/:` dataset files;
 
 `images/:` the image resource used in this repository;
 
