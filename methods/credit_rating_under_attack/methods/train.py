@@ -7,6 +7,7 @@ from torch_geometric.data import Data
 from torch_geometric.loader import NeighborLoader
 from tqdm import tqdm
 from sklearn.metrics import roc_auc_score,accuracy_score,precision_score,f1_score,recall_score,classification_report
+from sklearn.preprocessing import MinMaxScaler
 from utils import load_data, preprocess 
 from PSAGNN import PSAGNNNet
 from SAGNN import SAGNNNet
@@ -51,8 +52,15 @@ p=args.p
 label_to_index,labels,features,edge_index=load_data(args.year,args.Q,args.attack_rate)
 train_mask,test_mask=preprocess()
 
+### Normalize features
+scaler = MinMaxScaler()
+features = features.numpy()
+scaler.fit(features[:int(0.5*features.shape[0])])
+features_norm = scaler.transform(features)
+features_norm = torch.FloatTensor(features_norm)
+
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-data = Data(x = features, edge_index = edge_index.t().contiguous(), y = labels).to(device)
+data = Data(x = features_norm, edge_index = edge_index.t().contiguous(), y = labels).to(device)
 if args.method == "PSAGNN":
     psagnn = PSAGNNNet(features.shape[1], len(label_to_index), hiddim=args.hiddim, droprate=args.droprate,hidlayers=args.hidlayers).to(device)
     model = Model(psagnn, args, device)
@@ -122,6 +130,3 @@ if args.method == "SAGNN":
     print(best_acc)
 
       
-
-
-

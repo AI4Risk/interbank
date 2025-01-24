@@ -7,6 +7,7 @@ from torch_geometric.data import Data
 from torch_geometric.loader import NeighborLoader
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import MinMaxScaler
 from utils import load_data, preprocess 
 from GCN import GCN, Model
 from GAT import GAT
@@ -33,9 +34,16 @@ args = parser.parse_args()
 
 label_to_index,labels,features,edge_index=load_data(args.year,args.quarter)
 train_mask,test_mask=preprocess()
+# Normalize
+scaler = MinMaxScaler()
+features = features.numpy()
+scaler.fit(features[:int(0.5*features.shape[0])])
+features_norm = scaler.transform(features)
+features_norm = torch.FloatTensor(features_norm)
+
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-data = Data(x = features, edge_index = edge_index.t().contiguous(), y = labels).to(device)
+data = Data(x = features_norm, edge_index = edge_index.t().contiguous(), y = labels).to(device)
 
 if (args.net == "GCN"):
     gnnnet = GCN(features.shape[1], len(label_to_index), hiddim=args.hiddim, droprate=args.droprate,hidlayers=args.hidlayers,p=1).to(device)
@@ -85,8 +93,12 @@ for epoch in tqdm(range(args.epochs)):
 
 print_year = args.year
 print_quarter = args.quarter
-        
+
 with open('./results/classification_report_' + str(print_year) + "Q" + str(print_quarter) + '.txt', 'a') as f:
     f.write("\n" + str(gnnnet.model_name) + " epochs " + str(args.epochs) + "\n")
     f.write(report)
     f.write("\n")
+# with open('./credit_rating_results_TGAR/classification_report_' + str(print_year) + "Q" + str(print_quarter) + '.txt', 'a') as f:
+#     f.write("\n" + str(gnnnet.model_name) + " epochs " + str(args.epochs) + "\n")
+#     f.write(report)
+#     f.write("\n")

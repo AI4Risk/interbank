@@ -51,9 +51,17 @@ def load_data(year,Q,attack_rate):
                 continue
             node_info = node.split(',')    
             index_dict[node_info[0]] = len(index_dict)
-            features.append([float(i) for i in node_info[1:-1]])
-                
-            label_str = node_info[-1]
+            # features.append([float(i) for i in node_info[1:-1]])
+            if len(node_info)>72:
+                features.append([float(i) for i in node_info[1:-3]])
+            else:
+                features.append([float(i) for i in node_info[1:-1]])
+
+            # label_str = node_info[-1]
+            if len(node_info)>72:
+                label_str = node_info[-3]
+            else:
+                label_str = node_info[-1]
             if(label_str not in label_to_index.keys()):
                 label_to_index[label_str] = len(label_to_index)
             labels.append(label_to_index[label_str])
@@ -69,9 +77,17 @@ def load_data(year,Q,attack_rate):
                 continue
             node_info = node.split(',')    
             index_dict[str(int(node_info[0])+24271)] = len(index_dict)
-            features.append([float(i) for i in node_info[1:-1]])
-                
-            label_str = node_info[-1]
+            # features.append([float(i) for i in node_info[1:-1]])
+            if len(node_info)>72:
+                features.append([float(i) for i in node_info[1:-3]])
+            else:
+                features.append([float(i) for i in node_info[1:-1]])
+
+            # label_str = node_info[-1]
+            if len(node_info)>72:
+                label_str = node_info[-3]
+            else:
+                label_str = node_info[-1]
             if(label_str not in label_to_index.keys()):
                 label_to_index[label_str] = len(label_to_index)
             labels.append(label_to_index[label_str])
@@ -114,7 +130,6 @@ def load_data(year,Q,attack_rate):
     features = torch.FloatTensor(features)
     edge_index =  torch.LongTensor(edge_index)
     return label_to_index,labels,features,edge_index
-
 
 
 def preprocess():
