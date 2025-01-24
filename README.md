@@ -9,12 +9,11 @@ We will introduce the dataset, the credit rating methods, and the credit rating 
 Source codes implementation of papers:
 
 - Credit Rating Method:
-  - `TGAR`: Transformed Graph Attention for Credit Rating, published in [ICIEA 2023](https://ieeexplore.ieee.org/document/10241546). 
-  - `HFTCRNet`: HFTCRNet: Hierarchical Fusion Transformer for Interbank Credit Rating and Risk Assessment, published in [TNNLS](https://ieeexplore.ieee.org/abstract/document/10729282).
-  - `DPTAP`: Dual Pairwise Pre-training and Prompt-tuning with Aligned Prototypes for Interbank Credit Rating, accepted by WWW 2025.
-- Credit Rating Defense Method
+  - `TGAR`: Transformed Graph Attention for Credit Rating, published in [ICIEA 2023](https://ieeexplore.ieee.org/document/10241546).
   - `SA-GNN`: Preventing Attacks in Interbank Credit Rating with Selective-aware Graph Neural Network, published in [IJCAI 2023](https://www.ijcai.org/proceedings/2023/0675.pdf). 
-  - `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, published in [TNNLS](https://ieeexplore.ieee.org/document/10815626). 
+  - `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, published in [TNNLS 2024a](https://ieeexplore.ieee.org/document/10815626). 
+  - `HFTCRNet`: HFTCRNet: Hierarchical Fusion Transformer for Interbank Credit Rating and Risk Assessment, published in [TNNLS 2024b](https://ieeexplore.ieee.org/abstract/document/10729282).
+  - `DPTAP`: Dual Pairwise Pre-training and Prompt-tuning with Aligned Prototypes for Interbank Credit Rating, accepted by [WWW 2025]().
 
 ## Contents
 
@@ -211,6 +210,7 @@ title = {Dual Pairwise Pre-training and Prompt-tuning with Aligned Prototypes fo
 year = {2025},
 booktitle = {Proceedings of the ACM Web Conference 2025},
 }
+
 @article{liu2024preferential,
   title={Preferential Selective-Aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating},
   author={Liu, Junyi and Cheng, Dawei and Jiang, Changjun},
@@ -218,6 +218,7 @@ booktitle = {Proceedings of the ACM Web Conference 2025},
   year={2024},
   publisher={IEEE}
 }
+
 @article{li2024hftcrnet,
   title={HFTCRNet: Hierarchical Fusion Transformer for Interbank Credit Rating and Risk Assessment},
   author={Li, Jiangtong and Zhou, Ziyuan and Zhang, Jingkai and Cheng, Dawei and Jiang, Changjun},
@@ -225,6 +226,7 @@ booktitle = {Proceedings of the ACM Web Conference 2025},
   year={2024},
   publisher={IEEE}
 }
+
 @inproceedings{liu2023preventing,
     title={Preventing attacks in interbank credit rating with selective-aware graph neural network},
     author={Liu, Junyi and Cheng, Dawei and Jiang, Changjun},
@@ -232,6 +234,7 @@ booktitle = {Proceedings of the ACM Web Conference 2025},
     pages={6085--6093},
     year={2023}
 }
+
 @inproceedings{liu2023transformed,
     title={Transformed Graph Attention for Credit Rating},
     author={Liu, Charles Z. and Xiang, Sheng and Cheng, Dawei and Liu, Junyi and Zhang, Ying and Qin, Lu},
