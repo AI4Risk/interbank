@@ -146,8 +146,8 @@ The results of different credit rating methods with regards to different years a
 | TGAR     | 0.6197 | 0.7536 | 0.7539 | 0.7112 | 0.6511 | 0.5810 |
 | HFTCRNet | 0.5090 | 0.7130 | 0.6935 | 0.6600 | 0.6405 | 0.6563 |
 | DPTAP    | 0.7401 | 0.7234 | 0.6745 | 0.6189 | 0.5539 | 0.5320 |
-| SAGNN    | 0.3830 | 0.4385 | 0.4734 | 0.4531 | 0.4295 | 0.3570 |
-| PSAGNN   | 0.4048 | 0.4868 | 0.5147 | 0.5603 | 0.5907 | 0.5483 |
+<!-- | SAGNN    | 0.3830 | 0.4385 | 0.4734 | 0.4531 | 0.4295 | 0.3570 |-->
+<!-- | PSAGNN   | 0.4048 | 0.4868 | 0.5147 | 0.5603 | 0.5907 | 0.5483 |-->
 
 **Macro** $F_1$
 
@@ -158,8 +158,8 @@ The results of different credit rating methods with regards to different years a
 | TGAR     | 0.5865 | 0.6553 | 0.5958 | 0.6206 | 0.5974 | 0.4947 |
 | HFTCRNet | 0.5150 | 0.6688 | 0.6193 | 0.6373 | 0.6145 | 0.5930 |
 | DPTAP    | -      | -      | -      | -      | -      | -      |
-| SAGNN    | 0.2043 | 0.2056 | 0.2570 | 0.2563 | 0.3396 | 0.2949 |
-| PSAGNN   | 0.3148 | 0.3679 | 0.3986 | 0.4564 | 0.4893 | 0.4797 |
+<!-- | SAGNN    | 0.2043 | 0.2056 | 0.2570 | 0.2563 | 0.3396 | 0.2949 |-->
+<!-- | PSAGNN   | 0.3148 | 0.3679 | 0.3986 | 0.4564 | 0.4893 | 0.4797 |-->
 
 Note: For the quarterly credit rating results and the credit rating results under attack, please refer to ```results/further_results.md```
 
