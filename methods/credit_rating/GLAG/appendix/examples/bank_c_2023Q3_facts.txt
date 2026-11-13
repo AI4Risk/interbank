@@ -1,0 +1,47 @@
+=== Selected supplementary facts (2023 Q3) ===
+
+ID: f100
+Concept: Revenues
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 5233000000.0 USD
+-----
+ID: f160
+Concept: EarningsPerShareBasic
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 3.6 iso4217:USD/shares
+-----
+ID: f164
+Concept: EarningsPerShareDiluted
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 3.6 iso4217:USD/shares
+-----
+ID: f3170
+Concept: FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisAssetSales
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 186000000.0 USD
+-----
+ID: f3172
+Concept: FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisAssetSettlements
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 233000000.0 USD
+-----
+ID: f4010
+Concept: DerivativeAssetSetoffRightAmount
+Period: 2023-09-30T00:00:00
+Value: 1396000000.0 USD
+-----
+ID: f4247
+Concept: RevenueFromContractWithCustomerExcludingAssessedTax
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 5233000000.0 USD
+-----
+ID: f2409
+Concept: LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths
+Period: 2023-09-30T00:00:00
+Value: 14193000000.0 USD
+-----
+ID: f558
+Concept: DebtSecuritiesHeldToMaturityDerivativeCumulativeLoss
+Period: 2023-09-30T00:00:00
+Value: 297000000.0 USD
+-----

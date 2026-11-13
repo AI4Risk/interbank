@@ -1,0 +1,52 @@
+=== Selected supplementary facts (2023 Q3) ===
+
+ID: f114
+Concept: Revenues
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 25167000000.0 USD
+-----
+ID: f174
+Concept: EarningsPerShareBasic
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 0.91 iso4217:USD/shares
+-----
+ID: f178
+Concept: EarningsPerShareDiluted
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 0.9 iso4217:USD/shares
+-----
+ID: f674
+Concept: BrokerageCommissionsRevenue
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 3963000000.0 USD
+-----
+ID: f690
+Concept: InvestmentBankingRevenue
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 1188000000.0 USD
+-----
+ID: f118
+Concept: FinancingReceivableExcludingAccruedInterestAndOffBalanceSheetLiabilityCreditLossProvisionReversal
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 1234000000.0 USD
+-----
+ID: f6067
+Concept: GainsLossesOnLoansHeldForSale
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: -28000000.0 USD
+-----
+ID: f4410
+Concept: CommonStockCapitalSharesReservedForFutureIssuance
+Period: 2023-09-30T00:00:00
+Value: 496000000.0 shares
+-----
+ID: f5103
+Concept: FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisAssetSales
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 303000000.0 USD
+-----
+ID: f5105
+Concept: FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisAssetSettlements
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 82000000.0 USD
+-----

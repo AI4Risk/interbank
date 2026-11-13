@@ -1,0 +1,6 @@
+
+Please analyze the following input data:
+
+<InputData>
+{input_data}
+</InputData>

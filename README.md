@@ -14,6 +14,7 @@ Source codes implementation of papers:
   - `PSAGNN`: Preferential Selective-aware Graph Neural Network for Preventing Attacks in Interbank Credit Rating, published in [TNNLS 2024a](https://ieeexplore.ieee.org/document/10815626). 
   - `HFTCRNet`: HFTCRNet: Hierarchical Fusion Transformer for Interbank Credit Rating and Risk Assessment, published in [TNNLS 2024b](https://ieeexplore.ieee.org/abstract/document/10729282).
   - `DPTAP`: Dual Pairwise Pre-training and Prompt-tuning with Aligned Prototypes for Interbank Credit Rating, accepted by [WWW 2025]().
+  - `GLAG`: Generative LLM-Augmented Graph Mining for Interbank Credit Assessment, under review.
 
 ## Contents
 
@@ -124,6 +125,14 @@ python methods/credit_rating/DPTAP/main.py --device=0 --gnn_type='GT' --input_di
 
 
 
+To train the **GLAG** model, run from the repository root:
+
+```
+python -m methods.credit_rating.GLAG.main --device=0 --gnn_type='GT' --input_dim=70 --hid_dim=256 --pretrain_epochs=1000 --rec_mat_epochs=200 --tune_epochs=100 --lr=0.01 --weight_decay=5e-4
+```
+
+Predictions are saved in `preds/`. Run `python -m methods.credit_rating.GLAG.preds_to_table` to save evaluation results to `results/result.xlsx`. See the [GLAG README](methods/credit_rating/GLAG/README.md) for dependencies and data settings.
+
 To train the **SAGNN** or **PSAGNN** model, run
 
 ```
@@ -146,6 +155,7 @@ The results of different credit rating methods with regards to different years a
 | TGAR     | 0.6197 | 0.7536 | 0.7539 | 0.7112 | 0.6511 | 0.5810 |
 | HFTCRNet | 0.5090 | 0.7130 | 0.6935 | 0.6600 | 0.6405 | 0.6563 |
 | DPTAP    | 0.7401 | 0.7234 | 0.6745 | 0.6189 | 0.5539 | 0.5320 |
+| GLAG  | 0.7870 | 0.8490 | 0.7980 | 0.7789 | 0.8060 | 0.5298 |
 <!-- | SAGNN    | 0.3830 | 0.4385 | 0.4734 | 0.4531 | 0.4295 | 0.3570 |-->
 <!-- | PSAGNN   | 0.4048 | 0.4868 | 0.5147 | 0.5603 | 0.5907 | 0.5483 |-->
 
@@ -178,13 +188,18 @@ scikit-learn                 1.0.2
 pandas                       1.2.3
 numpy                        1.21.5
 powerlaw                     1.3.4
+transformers                 5.3.0
+gensim                       4.4.0
+scipy                        1.17.1
+matplotlib                   3.10.8
+openpyxl                     3.1.5
 ```
 
 To install all these packages, please first install miniconda and then try this command:
 
 ```
 conda install tqdm scikit-learn pandas numpy pyg pytorch-scatter pytorch-sparse pytorch-cluster pytorch-cluster pytorch-spline-conv powerlaw=1.3.4 pytorch=1.13.1 torchvision=0.14.1 torchaudio=0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia -c pyg
-pip install powerlaw==1.3.4
+pip install powerlaw==1.3.4 transformers gensim scipy matplotlib openpyxl
 ```
 
 ## Contributors :

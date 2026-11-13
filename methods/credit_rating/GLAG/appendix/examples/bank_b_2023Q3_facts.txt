@@ -1,0 +1,52 @@
+=== Selected supplementary facts (2023 Q3) ===
+
+ID: f63
+Concept: InvestmentBankingRevenue
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 1722000000.0 USD
+-----
+ID: f64
+Concept: InvestmentBankingRevenue
+Period: 2022-07-01T00:00:00/2022-09-30T00:00:00
+Value: 1674000000.0 USD
+-----
+ID: f67
+Concept: PrincipalTransactionsRevenue
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 6210000000.0 USD
+-----
+ID: f68
+Concept: PrincipalTransactionsRevenue
+Period: 2022-07-01T00:00:00/2022-09-30T00:00:00
+Value: 5383000000.0 USD
+-----
+ID: f121
+Concept: ProvisionForLoanLeaseAndOtherLosses
+Period: 2023-01-01T00:00:00/2023-09-30T00:00:00
+Value: 6558000000.0 USD
+-----
+ID: f122
+Concept: ProvisionForLoanLeaseAndOtherLosses
+Period: 2022-01-01T00:00:00/2022-09-30T00:00:00
+Value: 4101000000.0 USD
+-----
+ID: f171
+Concept: EarningsPerShareBasic
+Period: 2023-07-01T00:00:00/2023-09-30T00:00:00
+Value: 4.33 iso4217:USD/shares
+-----
+ID: f172
+Concept: EarningsPerShareBasic
+Period: 2022-07-01T00:00:00/2022-09-30T00:00:00
+Value: 3.13 iso4217:USD/shares
+-----
+ID: f7415
+Concept: TierOneRiskBasedCapital
+Period: 2023-09-30T00:00:00
+Value: 268579000000.0 USD
+-----
+ID: f7416
+Concept: TierOneRiskBasedCapital
+Period: 2023-09-30T00:00:00
+Value: 282482000000.0 USD
+-----
